@@ -18,6 +18,10 @@
         .sub-group { margin-top: 10px; }
         .sub-group .sub-title { font-size: clamp(10px, 3vw, 12px); font-weight: bold; color: #8c5d52; margin-bottom: 6px; padding-left: 4px; }
         .sub-group .member-card { border-color: #d4b5a5; }
+        .catatan-card { background: #fff3e6; border-radius: 14px; padding: 14px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border: 2px dashed #d4a373; margin-top: 16px; }
+        .catatan-card .catatan-title { font-size: clamp(12px, 3.5vw, 14px); font-weight: bold; color: #8c5d52; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+        .catatan-card ul { margin: 0; padding-left: 20px; font-size: clamp(11px, 3vw, 13px); color: #5a4b41; }
+        .catatan-card ul li { margin-bottom: 4px; }
     </style>
 </head>
 <body>
@@ -83,7 +87,8 @@
                     { label: 'Pagi Hari 1', filter: m => m.piket === 'Pagi Hari 1' },
                     { label: 'Pagi Hari 2', filter: m => m.piket === 'Pagi Hari 2' },
                     { label: 'Pagi Hari 3', filter: m => m.piket === 'Pagi Hari 3' },
-                    { label: 'Siang Hari 2', filter: m => m.piket === 'Siang Hari 2' },
+                    { label: 'Siang Hari 2 (Villa)', filter: m => m.piket === 'Siang Hari 2' },
+                    { label: 'Siang Hari 2 (Kawah Ratu)', filter: m => m.piket.includes('Kawah Ratu') },
                     { label: 'Siang Hari 3', filter: m => m.piket === 'Siang Hari 3' },
                     { label: 'Malam Hari 1', filter: m => m.piket === 'Malam Hari 1' },
                     { label: 'Malam Hari 2', filter: m => m.piket === 'Malam Hari 2' },
@@ -119,6 +124,24 @@
         }
 
         container.innerHTML = html;
+
+        const catatan = {
+            kesehatan: ['Obat: Antimo, paracetamol, minyak kayu putih / freshcare, plastik muntah'],
+            konsumsi: ['Nasi, Lauk, Air Putih', 'Khusus malam pertama, makan malam pop mie dan bakar-bakar'],
+            bakar: ['Arang, Frozen food (bebas asal sesuai budget)', 'Bakar-bakar: Rp 20.000 × 47 orang = Rp 940.000'],
+            kebersihan: ['Plastik sampah'],
+            photo: ['Awal masuk dan keluar villa foto semua ruangan'],
+            tenda: ['Persiapkan tenda sebelum berangkat', 'Malam ke 2 pasang tenda'],
+            inti: ['Kendaraan: Siapkan motor juga untuk konsumsi'],
+            ketua: ['Kendaraan: Siapkan motor juga untuk konsumsi']
+        };
+
+        if (catatan[type]) {
+            let noteHtml = '<div class="catatan-card"><div class="catatan-title"><i class="fas fa-clipboard-list"></i> Catatan</div><ul>';
+            catatan[type].forEach(s => { noteHtml += '<li>' + s + '</li>'; });
+            noteHtml += '</ul></div>';
+            container.innerHTML += noteHtml;
+        }
     </script>
 </body>
 </html>

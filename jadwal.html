@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal - Bogor Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-wrap { padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+        .page-wrap .back-link { text-decoration: none; color: #fff; font-size: clamp(11px, 3vw, 13px); font-weight: bold; background: #8c5d52; padding: 8px 16px; border-radius: 20px; align-self: flex-start; }
+        .page-wrap h2 { font-size: clamp(17px, 5.5vw, 22px); font-style: italic; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.2); margin: 0; word-break: break-word; }
+        .day-card { background: #fbeee6; border-radius: 14px; padding: 14px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border: 2px solid #bd9687; }
+        .day-card h3 { font-size: clamp(14px, 4.5vw, 18px); color: #8c5d52; margin-bottom: 10px; text-align: center; }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 10px; }
+        table { width: 100%; border-collapse: collapse; font-size: clamp(10px, 2.8vw, 12px); min-width: 500px; }
+        thead { background: #8c5d52; color: #fff; }
+        th { padding: 8px 6px; text-align: left; font-weight: bold; white-space: nowrap; }
+        td { padding: 6px; border-bottom: 1px solid #e1bca7; color: #5a4b41; }
+        tbody tr:nth-child(even) { background: rgba(189, 150, 135, 0.1); }
+        .tab-bar { display: flex; gap: 10px; margin-bottom: 5px; }
+        .tab-btn { flex: 1; padding: 10px; border: 2px solid #bd9687; border-radius: 12px; background: #fbeee6; color: #8c5d52; font-weight: bold; font-size: clamp(11px, 3vw, 13px); cursor: pointer; text-align: center; transition: all 0.2s; }
+        .tab-btn.active { background: #8c5d52; color: #fff; border-color: #8c5d52; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .empty-state { text-align: center; color: #fff; font-style: italic; font-size: clamp(11px, 3vw, 13px); opacity: 0.8; padding: 30px; }
+        .sub-tab-bar { display: flex; gap: 10px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="app-container page-wrap">
+        <a href="index.html" class="back-link">← KEMBALI</a>
+        <h2>RUNDOWN BOGOR ADVENTURE</h2>
+
+        <div class="tab-bar">
+            <button class="tab-btn active" onclick="switchDay('day1')">📋 Day 1</button>
+            <button class="tab-btn" onclick="switchDay('day2')">📋 Day 2</button>
+            <button class="tab-btn" onclick="switchDay('day3')">📋 Day 3</button>
+        </div>
+
+        <div id="day1" class="tab-content active">
+            <div class="day-card">
+                <h3>Day 1</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>No</th><th>Nama</th><th>Tempat</th><th>Jam</th><th>PJ</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Berangkat</td><td>Lapangan IDN</td><td>05.00 - 07.00</td><td>Ketua Acara & Wakil Ketua</td></tr>
+                            <tr><td>2</td><td>Sarapan</td><td>CR ONE</td><td>07.00 - 07.30</td><td>Konsumsi</td></tr>
+                            <tr><td>3</td><td>Kumpul</td><td>CR ONE</td><td>07.30 - 07.45</td><td>Najla & Amel</td></tr>
+                            <tr><td>4</td><td>Road Off</td><td>Sukabumi</td><td>07.45 - 11.00</td><td>Ketua Rafting</td></tr>
+                            <tr><td>5</td><td>Rafting</td><td>CR ONE</td><td>11.00 - 13.00</td><td>Ketua OffRoad</td></tr>
+                            <tr><td>6</td><td>Isoma (Dzuhur) & Ganti Baju</td><td>CR ONE</td><td>13.00 - 14.15</td><td>Konsumsi & Ketua Kelompok</td></tr>
+                            <tr><td>7</td><td>Flying Fox</td><td>CR ONE</td><td>14.15 - 16.00</td><td>Panitia BEM</td></tr>
+                            <tr><td>8</td><td>Sholat Ashar, Persiapan Balik ke Villa</td><td>CR ONE</td><td>16.00 - 17.00</td><td>Ketua Kelompok</td></tr>
+                            <tr><td>9</td><td>Balik ke Villa</td><td>Villa</td><td>17.00 - 17.30</td><td>MC</td></tr>
+                            <tr><td>10</td><td>Masuk ke Kamar</td><td>Villa</td><td>17.30 - 17.45</td><td>Ketua Kelompok</td></tr>
+                            <tr><td>11</td><td>Sholat Magrib</td><td>Musholah Villa</td><td>17.45 - 18.30</td><td>Ghaitsani / Unaisah</td></tr>
+                            <tr><td>12</td><td>Merapihkan Barang</td><td>Villa</td><td>18.30 - 19.00</td><td>Ketua Kelompok</td></tr>
+                            <tr><td>13</td><td>Sholat Isya</td><td>Musholah Villa</td><td>19.00 - 19.30</td><td>Ummul Amalia / Nafishah Dzakira</td></tr>
+                            <tr><td>14</td><td>Persiapan Kegiatan</td><td>Villa</td><td>19.30 - 19.45</td><td>Panitia</td></tr>
+                            <tr><td>15</td><td>Kegiatan Malam (Bakar-bakar, Berenang, Nobar)</td><td>Aula Luar Villa</td><td>19.45 - 22.00</td><td>Konsumsi, Ketua Kel, Panitia BEM</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="day2" class="tab-content">
+            <div class="day-card">
+                <h3>Day 2</h3>
+                <div class="tab-bar">
+                    <button class="tab-btn active" onclick="switchDay2('kawah-ratu')">🏔️ Kawah Ratu</button>
+                    <button class="tab-btn" onclick="switchDay2('villa')">🏠 Villa</button>
+                </div>
+
+                <div id="d2-kawah-ratu" class="tab-content active">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>No</th><th>Nama</th><th>Tempat</th><th>Jam</th><th>PJ</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Sholat Shubuh</td><td>Musholah Villa</td><td>04.30 - 05.15</td><td>Ghaitsa / Unaisah</td></tr>
+                                <tr><td>2</td><td>Persiapan Berangkat</td><td>Aula Villa</td><td>05.15 - 06.00</td><td>Ketua Team Gunung</td></tr>
+                                <tr><td>3</td><td>Berangkat ke Lokasi Tracking</td><td>-</td><td>06.00 - 08.00</td><td>Team Gunung</td></tr>
+                                <tr><td>4</td><td>Sarapan</td><td>Kawah Ratu</td><td>08.00 - 08.30</td><td>Konsum Gunung</td></tr>
+                                <tr><td>5</td><td>Persiapan Trekking</td><td>Kawah Ratu</td><td>08.30 - 08.45</td><td>Team Gunung</td></tr>
+                                <tr><td>6</td><td>Naik Pos 1</td><td>Kawah Ratu</td><td>08.45 - 09.30</td><td>Team Gunung</td></tr>
+                                <tr><td>7</td><td>Pos 1</td><td>Kawah Ratu</td><td>09.30 - 09.45</td><td>Team Gunung</td></tr>
+                                <tr><td>8</td><td>Naik Pos 2</td><td>Kawah Ratu</td><td>09.45 - 10.30</td><td>Team Gunung</td></tr>
+                                <tr><td>9</td><td>Pos 2</td><td>Kawah Ratu</td><td>10.30 - 10.45</td><td>Team Gunung</td></tr>
+                                <tr><td>10</td><td>Naik Pos 3</td><td>Kawah Ratu</td><td>10.45 - 11.30</td><td>Team Gunung</td></tr>
+                                <tr><td>11</td><td>Pos 3</td><td>Kawah Ratu</td><td>11.30 - 11.45</td><td>Team Gunung</td></tr>
+                                <tr><td>12</td><td>Foto - Foto</td><td>Kawah Ratu</td><td>11.45 - 12.10</td><td>Team Gunung</td></tr>
+                                <tr><td>13</td><td>Istirahat Makan</td><td>Kawah Ratu</td><td>12.10 - 13.00</td><td>Konsum Gunung</td></tr>
+                                <tr><td>14</td><td>Turun Pos 3</td><td>Kawah Ratu</td><td>13.00 - 13.45</td><td>Team Gunung</td></tr>
+                                <tr><td>15</td><td>Pos 3</td><td>Kawah Ratu</td><td>13.45 - 14.00</td><td>Team Gunung</td></tr>
+                                <tr><td>16</td><td>Turun Pos 2</td><td>Kawah Ratu</td><td>14.00 - 14.45</td><td>Team Gunung</td></tr>
+                                <tr><td>17</td><td>Pos 2</td><td>Kawah Ratu</td><td>14.45 - 15.00</td><td>Team Gunung</td></tr>
+                                <tr><td>18</td><td>Turun Pos 1</td><td>Kawah Ratu</td><td>15.00 - 15.45</td><td>Team Gunung</td></tr>
+                                <tr><td>19</td><td>Pos 1</td><td>Kawah Ratu</td><td>15.45 - 16.00</td><td>Team Gunung</td></tr>
+                                <tr><td>20</td><td>Tiba di Basecamp</td><td>Kawah Ratu</td><td>16.00 - 16.15</td><td>Team Gunung</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="d2-villa" class="tab-content">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>No</th><th>Nama</th><th>Tempat</th><th>Jam</th><th>PJ</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Sholat Shubuh</td><td>Musholah Villa</td><td>04.30 - 05.15</td><td>Ghaitsa / Unaisah</td></tr>
+                                <tr><td>2</td><td>Jalan Pagi</td><td>Villa</td><td>05.15 - 07.00</td><td>PJ Acara & MC</td></tr>
+                                <tr><td>3</td><td>Mandi</td><td>Villa</td><td>07.00 - 08.00</td><td>-</td></tr>
+                                <tr><td>4</td><td>Sarapan & Persiapan Game</td><td>Villa</td><td>08.00 - 08.45</td><td>Konsumsi</td></tr>
+                                <tr><td>5</td><td>Game Air</td><td>Kolam Renang Villa</td><td>08.45 - 10.00</td><td>PJ Acara & MC</td></tr>
+                                <tr><td>6</td><td>Bebas</td><td>Villa</td><td>10.00 - 12.00</td><td>-</td></tr>
+                                <tr><td>7</td><td>Sholat Dzuhur, Makan</td><td>Musholah Villa</td><td>12.00 - 13.30</td><td>Konsumsi & Amal</td></tr>
+                                <tr><td>8</td><td>Bebas</td><td>Villa</td><td>13.00 - 15.00</td><td>PJ Acara & MC</td></tr>
+                                <tr><td>9</td><td>Sholat Ashar</td><td>Musholah Villa</td><td>15.15 - 15.30</td><td>Ghaitsa / Unaisah</td></tr>
+                                <tr><td>10</td><td>Game</td><td>Villa</td><td>16.00 - 18.00</td><td>PJ Acara & MC</td></tr>
+                                <tr><td>11</td><td>Isoma (Magrib - Isya)</td><td>Musholah Villa</td><td>18.00 - 19.15</td><td>Konsumsi & Nafishah Dzakirah</td></tr>
+                                <tr><td>12</td><td>Tuker Kado</td><td>Villa</td><td>19.15 - 20.30</td><td>PJ Acara & MC</td></tr>
+                                <tr><td>13</td><td>Camping</td><td>Kawah Ratu</td><td>20.30 - Selesai</td><td>PJ Acara & MC</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="day3" class="tab-content">
+            <div class="day-card">
+                <h3>Day 3</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>No</th><th>Nama</th><th>Tempat</th><th>Jam</th><th>PJ</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Sholat Shubuh</td><td>Musholah Villa</td><td>04.30 - 05.00</td><td>Amal</td></tr>
+                            <tr><td>2</td><td>Mandi</td><td>Villa</td><td>05.00 - 07.00</td><td>Ketua Kelompok</td></tr>
+                            <tr><td>3</td><td>Makan</td><td>Villa</td><td>07.00 - 08.00</td><td>Ketua Kelompok</td></tr>
+                            <tr><td>4</td><td>Bebas</td><td>Villa</td><td>08.00 - 10.00</td><td>Ketua Kelompok</td></tr>
+                            <tr><td>5</td><td>Persiapan</td><td>Villa</td><td>10.00 - 11.30</td><td>Ketua Kelompok</td></tr>
+                            <tr><td>6</td><td>Balik</td><td>Area Parkiran Villa</td><td>12.00 - Selesai</td><td>Ketua Acara & Wakil Ketua</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchDay(day) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(day).classList.add('active');
+            document.querySelector('.tab-btn[onclick*="' + day + '"]').classList.add('active');
+        }
+
+        function switchDay2(tab) {
+            document.querySelectorAll('#day2 .tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('#day2 .tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById('d2-' + tab).classList.add('active');
+            document.querySelector('#day2 .tab-btn[onclick*="' + tab + '"]').classList.add('active');
+        }
+    </script>
+</body>
+</html>
