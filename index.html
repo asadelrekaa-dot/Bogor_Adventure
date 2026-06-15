@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogor Adventure</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+    <div class="app-container">
+        <nav class="top-nav">
+            <a href="#kelompok-section">KELOMPOK</a>
+            <a href="#divisi-section">DIVISI</a>
+            <a href="#jabatan-section">JABATAN</a>
+            <a href="#folder-section">FOLDER</a>
+            <a href="#kontak-section">KONTAK</a>
+        </nav>
+
+        <header class="main-header">
+            <h1 class="main-title">BOGOR AVENTURE</h1>
+            <p class="subtitle">BOGOR ADVENTURE! EXPLORE MORE, FEAR LESS!</p>
+            
+            <div class="search-profile-row">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="CARI NAMA LALU TEKAN ENTER.....">
+                </div>
+                <div class="logo-circle">
+                    <img src="Images/logo.png" alt="Bogor Adventure">
+                </div>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            
+            <section id="kelompok-section" class="section-container">
+                <h2 class="section-title-large">KELOMPOK</h2>
+                
+                <div class="card-wide clickable-card" data-type="gunung">
+                    <img src="Images/gunung.jpg" alt="Gunung">
+                    <div class="card-text">
+                        <h3>LIHAT SEMUA</h3>
+                        <h2>KELOMPOK GUNUNG</h2>
+                    </div>
+                    <span class="arrow-btn">➔</span>
+                </div>
+
+                <div class="card-wide clickable-card" data-type="kamar">
+                    <img src="Images/kamar.jpg" alt="Kamar">
+                    <div class="card-text">
+                        <h3>LIHAT SEMUA</h3>
+                        <h2>KELOMPOK KAMAR</h2>
+                    </div>
+                    <span class="arrow-btn">➔</span>
+                </div>
+
+                <div class="card-wide clickable-card" data-type="rafting">
+                    <img src="Images/rafting.jpg" alt="Rafting">
+                    <div class="card-text">
+                        <h3>LIHAT SEMUA</h3>
+                        <h2>KELOMPOK RAFTING</h2>
+                    </div>
+                    <span class="arrow-btn">➔</span>
+                </div>
+
+                <div class="card-wide clickable-card" data-type="offroad">
+                    <img src="Images/offroad.jpg" alt="Offroad">
+                    <div class="card-text">
+                        <h3>LIHAT SEMUA</h3>
+                        <h2>KELOMPOK OFFROAD</h2>
+                    </div>
+                    <span class="arrow-btn">➔</span>
+                </div>
+
+                <div class="card-wide clickable-card" data-type="mback">
+                    <img src="Images/Mback.jpg" alt="Mobil Bak">
+                    <div class="card-text">
+                        <h3>LIHAT SEMUA</h3>
+                        <h2>KELOMPOK MOBIL BAK</h2>
+                    </div>
+                    <span class="arrow-btn">➔</span>
+                </div>
+            </section>
+
+            <section id="divisi-section" class="section-container text-center">
+                <h2 class="section-title-large">DIVISI & PIKET</h2>
+                <div class="grid-2x3">
+                    <a href="divisi.html?type=konsumsi-pagi" class="card-square" style="text-decoration:none;">PIKET KONSUMSI<br><b>PAGI (H1/H2/H3)</b></a>
+                    <a href="divisi.html?type=konsumsi-siang" class="card-square" style="text-decoration:none;">PIKET KONSUMSI<br><b>SIANG & KAWAH</b></a>
+                    <a href="divisi.html?type=konsumsi-malam" class="card-square" style="text-decoration:none;">PIKET KONSUMSI<br><b>MALAM (H1/H2)</b></a>
+                    <a href="divisi.html?type=frozen-food" class="card-square" style="text-decoration:none;">TIM BAKAR<br><b>FROZEN FOOD</b></a>
+                    <a href="divisi.html?type=panitia-inti" class="card-square" style="text-decoration:none;">PANITIA INTI<br><b>STRUKTURAL</b></a>
+                    <a href="divisi.html?type=divisi-lain" class="card-square" style="text-decoration:none;">DIVISI LAPANGAN<br><b>KEBERSIHAN/KESEHATAN</b></a>
+                </div>
+            </section>
+
+            <section id="jabatan-section" class="section-container text-center">
+                <h2 class="section-title-large">JABATAN</h2>
+                <div class="grid-jabatan">
+                    <a href="jabatan.html?type=inti" class="card-square" style="text-decoration:none;">PANITIA INTI</a>
+                    <a href="jabatan.html?type=timekeeper" class="card-square" style="text-decoration:none;">TIMEKEEPER</a>
+                    <a href="jabatan.html?type=kesehatan" class="card-square" style="text-decoration:none;">KESEHATAN</a>
+                    <a href="jabatan.html?type=photo" class="card-square" style="text-decoration:none;">PHOTO BEFORE</a>
+                    <a href="jabatan.html?type=bakar" class="card-square" style="text-decoration:none;">BAKAR-BAKAR</a>
+                    <a href="jabatan.html?type=tenda" class="card-square" style="text-decoration:none;">TENDA</a>
+                    <a href="jabatan.html?type=mc" class="card-square" style="text-decoration:none;">MC</a>
+                    <a href="jabatan.html?type=komdigi" class="card-square" style="text-decoration:none;">KOMDIGI</a>
+                    <a href="jabatan.html?type=acara" class="card-square" style="text-decoration:none;">ACARA</a>
+                    <a href="jabatan.html?type=ketua" class="card-square" style="text-decoration:none;">KETUA</a>
+                    <a href="jabatan.html?type=kebersihan" class="card-square" style="text-decoration:none;">KEBERSIHAN</a>
+                    <a href="jabatan.html?type=konsumsi" class="card-square" style="text-decoration:none;">KONSUMSI</a>
+                </div>
+            </section>
+
+            <section id="folder-section" class="section-container text-center">
+                <h2 class="section-title-large">Notee</h2>
+                <a href="https://drive.google.com/drive/folders/1pPTmFSzPqtbpgSoNdYkEfg1twKszm3Ts?usp=sharing" target="_blank" class="btn-pill" style="text-decoration:none;">
+                    <i class="fas fa-folder-open"></i> PHOTO BOGOR ADVENTURE
+                </a>
+                <a href="pengeluaran.html" class="btn-pill" style="text-decoration:none;">
+                    <i class="fas fa-calculator"></i> PENGELUARAN
+                </a>
+                <a href="https://forms.gle/nZnUotDhH6wJCSyc8" target="_blank" class="btn-pill" style="text-decoration:none;">
+                    <i class="fas fa-comment-dots"></i> KRITIK & SARAN
+                </a>
+            </section>
+
+            <section id="kontak-section" class="footer-panel">
+                <div class="logo-circle micro">
+                    <img src="Images/logo.png" alt="Bogor Adventure">
+                </div>
+
+                <div class="footer-section-title">Kontak</div>
+                <div class="footer-divider"></div>
+                <div class="grid-2x2">
+                    <a href="https://wa.me/6289684340230" target="_blank" class="btn-small-pill" style="text-decoration:none;">ASADEL</a>
+                    <a href="https://wa.me/6281370563687" target="_blank" class="btn-small-pill" style="text-decoration:none;">PUTRI</a>
+                    <a href="https://wa.me/6285640959396" target="_blank" class="btn-small-pill" style="text-decoration:none;">SAUSAN</a>
+                    <a href="https://wa.me/6281213060590" target="_blank" class="btn-small-pill" style="text-decoration:none;">RIZKA</a>
+                </div>
+
+                <div class="footer-section-title">Lokasi</div>
+                <div class="footer-divider"></div>
+                <div class="footer-map">
+                    <div class="map-label">📍 TITIK KUMPUL - CR ONE CISADANE</div>
+                    <iframe src="https://maps.google.com/maps?q=-6.7021103,106.8171822&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="footer-map">
+                    <div class="map-label">🏠 VILLA - BUAH NAGA CARINGIN</div>
+                    <iframe src="https://maps.google.com/maps?q=Villa%20Buah%20Naga%20Caringin%20Bogor&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <p class="credits">@WEBBY.ASADEL</p>
+            </section>
+
+        </main>
+    </div>
+
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalName">Nama Anggota</h2>
+            <hr>
+            <div class="modal-field"><span class="field-label">Jabatan / Divisi</span><span class="field-value" id="modalDivisi">-</span></div>
+            <div class="modal-field"><span class="field-label">Jadwal Piket</span><span class="field-value" id="modalTugas">-</span></div>
+            <div class="modal-field"><span class="field-label">Kelompok Gunung</span><span class="field-value" id="modalGunung">-</span></div>
+            <div class="modal-field"><span class="field-label">Kelompok Kamar</span><span class="field-value" id="modalKamar">-</span></div>
+            <div class="modal-field"><span class="field-label">Kelompok Rafting</span><span class="field-value" id="modalRafting">-</span></div>
+            <div class="modal-field"><span class="field-label">Kelompok Offroad</span><span class="field-value" id="modalOffroad">-</span></div>
+            <div class="modal-field"><span class="field-label">Kelompok Mobil Bak</span><span class="field-value" id="modalMback">-</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
