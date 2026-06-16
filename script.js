@@ -89,6 +89,14 @@ searchInput.addEventListener('keypress', function(e) {
             document.getElementById('modalRafting').textContent = found.rafting;
             document.getElementById('modalOffroad').textContent = found.offroad;
             document.getElementById('modalMback').textContent = found.mback;
+            const isKetua = (found.offroad + found.rafting + found.mback + found.gunung + found.divisi).toLowerCase().includes('ketua');
+            const btn = document.getElementById('kelompokSayaBtn');
+            if (isKetua) {
+                btn.style.display = 'flex';
+                btn.href = 'kelompok-saya.html?name=' + encodeURIComponent(found.name);
+            } else {
+                btn.style.display = 'none';
+            }
             modal.style.display = "flex";
         } else {
             alert("Nama tidak ditemukan! Silakan cek ejaan kembali.");
@@ -99,6 +107,7 @@ searchInput.addEventListener('keypress', function(e) {
 closeModal.addEventListener('click', () => {
     modal.style.display = "none";
     searchInput.value = "";
+    document.getElementById('kelompokSayaBtn').style.display = 'none';
 });
 
 // KELOMPOK CARDS -> redirect

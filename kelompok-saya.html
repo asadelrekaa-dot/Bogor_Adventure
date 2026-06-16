@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok Saya - Bogor Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .kelompok-page { padding: 20px; display: flex; flex-direction: column; gap: 30px; }
+        .kelompok-page .back-link { text-decoration: none; color: #fff; font-size: clamp(11px, 3.5vw, 13px); font-weight: bold; background: #8c5d52; padding: 8px 16px; border-radius: 20px; align-self: flex-start; }
+        .kelompok-page .kategori-title { font-size: clamp(17px, 6vw, 22px); font-style: italic; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.2); margin: 5px 0 10px; word-break: break-word; }
+        .kelompok-page .subtitle { font-size: clamp(12px, 4vw, 15px); color: #fbeee6; margin: -15px 0 5px; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+        .group-card { background: #fbeee6; border-radius: 16px; padding: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); border: 2px solid #bd9687; }
+        .group-card .card-header { font-weight: bold; color: #8c5d52; font-size: clamp(11px, 3.5vw, 13px); border-bottom: 2px solid #bd9687; padding-bottom: 6px; margin-bottom: 8px; }
+        .group-card .member-list { list-style: none; padding: 0; margin: 0; }
+        .group-card .member-list li { font-size: clamp(10px, 3vw, 12px); color: #5a4b41; padding: 3px 0; border-bottom: 1px dashed #e1bca7; }
+        .group-card .member-list li:last-child { border-bottom: none; }
+        .group-card .member-list li .ketua-badge { color: #8c5d52; font-weight: bold; font-size: clamp(8px, 2.5vw, 10px); }
+        .group-card .empty-state { font-size: clamp(9px, 2.8vw, 11px); color: #999; font-style: italic; }
+        .section-label { font-size: clamp(13px, 4vw, 16px); font-weight: bold; color: #fff; margin: 5px 0 10px; padding: 6px 14px; background: rgba(255,255,255,0.15); border-radius: 20px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="app-container kelompok-page">
+        <a href="index.html" class="back-link">← KEMBALI</a>
+        <h2 class="kategori-title" id="pageTitle">Kelompok Saya</h2>
+        <div class="subtitle" id="pageSubtitle"></div>
+        <div id="groupsContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const personName = params.get('name');
+        if (!personName) { window.location.href = 'index.html'; }
+
+        const person = memberDatabase.find(m => m.name.toLowerCase() === personName.toLowerCase());
+        if (!person) { window.location.href = 'index.html'; }
+
+        document.getElementById('pageTitle').textContent = 'KELOMPOK ' + person.name.toUpperCase();
+        document.getElementById('pageSubtitle').textContent = 'Anggota kelompok ' + person.name;
+
+        const groups = [
+            { key: 'offroad', label: 'Offroad', page: 'kelompok-offroad.html' },
+            { key: 'rafting', label: 'Rafting', page: 'kelompok-rafting.html' },
+            { key: 'mback', label: 'Mobil Bak', page: 'kelompok-mback.html' },
+            { key: 'kamar', label: 'Kamar', page: 'kelompok-kamar.html' },
+            { key: 'gunung', label: 'Gunung', page: 'kelompok-gunung.html' },
+        ];
+
+        const container = document.getElementById('groupsContainer');
+        let html = '';
+
+        groups.forEach(g => {
+            const raw = person[g.key];
+            if (!raw || raw === '-') return;
+
+            // Parse group label (strip "(Ketua)" etc.)
+            let groupLabel = raw.replace(/\s*\(Ketua\)/gi, '').replace(/\(Ketua\)/gi, '').trim();
+            // For kamar, it's just "Kamar X"
+            // For others, it's "Kelompok X"
+
+            const isKetua = raw.toLowerCase().includes('ketua');
+
+            // Find members in same group
+            const members = memberDatabase.filter(m => {
+                const val = m[g.key];
+                if (!val || val === '-') return false;
+                const cleanVal = val.replace(/\s*\(Ketua\)/gi, '').replace(/\(Ketua\)/gi, '').trim();
+                return cleanVal === groupLabel;
+            });
+
+            html += `<div class="section-label">${g.label.toUpperCase()}</div>`;
+            html += `<div class="card-grid">`;
+            html += `<div class="group-card">`;
+            html += `<div class="card-header">${groupLabel}</div>`;
+            html += `<ul class="member-list">`;
+            if (members.length === 0) {
+                html += `<li class="empty-state">Tidak ada anggota</li>`;
+            } else {
+                members.forEach(m => {
+                    const isMKetua = m[g.key].toLowerCase().includes('ketua');
+                    html += `<li>${m.name}${isMKetua ? ' <span class="ketua-badge">(KETUA)</span>' : ''}</li>`;
+                });
+            }
+            html += `</ul></div>`;
+            html += `</div>`;
+        });
+
+        container.innerHTML = html;
+    </script>
+</body>
+</html>
