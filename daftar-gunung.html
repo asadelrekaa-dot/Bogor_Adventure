@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Gunung - Bogor Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-wrap { padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+        .page-wrap .back-link { text-decoration: none; color: #fff; font-size: clamp(11px, 3vw, 13px); font-weight: bold; background: #8c5d52; padding: 8px 16px; border-radius: 20px; align-self: flex-start; }
+        .page-wrap h2 { font-size: clamp(17px, 5.5vw, 22px); font-style: italic; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.2); margin: 0; word-break: break-word; }
+        .card { background: #fbeee6; border-radius: 14px; padding: 14px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border: 2px solid #bd9687; }
+        .card h3 { font-size: clamp(13px, 4vw, 16px); color: #8c5d52; margin-bottom: 10px; }
+        .group-list { display: flex; flex-direction: column; gap: 8px; }
+        .group-item { background: #fff; border-radius: 10px; padding: 8px 12px; border-left: 4px solid #8c5d52; font-size: clamp(11px, 3vw, 13px); color: #5a4b41; }
+        .group-item .label { font-weight: bold; color: #8c5d52; }
+        .group-item .ketua { color: #2b5c43; font-weight: bold; }
+        .naik-icon { color: #2b5c43; }
+        .tidak-icon { color: #a05252; }
+        .split-layout { display: flex; flex-direction: column; gap: 20px; }
+        .member-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+        .tag { background: #e8d5c8; border-radius: 8px; padding: 2px 8px; font-size: clamp(10px, 2.8vw, 12px); color: #5a4b41; }
+        .tag.ketua-tag { background: #8c5d52; color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="app-container page-wrap">
+        <a href="index.html" class="back-link">← KEMBALI</a>
+        <h2>DAFTAR GUNUNG</h2>
+
+        <div class="card">
+            <h3><i class="fas fa-mountain naik-icon"></i> Naik Gunung</h3>
+            <div class="group-list">
+                <div class="group-item">
+                    <span class="label">Kelompok 1</span>
+                    <div class="member-tags">
+                        <span class="tag">Nabila</span><span class="tag">Zaro</span><span class="tag ketua-tag">Kanya (Ketua)</span><span class="tag">Nafisah Aldawiyah</span><span class="tag">Salma</span>
+                    </div>
+                </div>
+                <div class="group-item">
+                    <span class="label">Kelompok 2</span>
+                    <div class="member-tags">
+                        <span class="tag ketua-tag">Naimah (Ketua)</span><span class="tag">Ratu</span><span class="tag">Ghaitsani</span><span class="tag">Nadila</span><span class="tag">Naurah</span>
+                    </div>
+                </div>
+                <div class="group-item">
+                    <span class="label">Kelompok 3</span>
+                    <div class="member-tags">
+                        <span class="tag">Selvi</span><span class="tag">Anggun</span><span class="tag">Amalia</span><span class="tag">Marha Nabiila</span><span class="tag ketua-tag">Sausan (Ketua)</span>
+                    </div>
+                </div>
+                <div class="group-item">
+                    <span class="label">Kelompok 4</span>
+                    <div class="member-tags">
+                        <span class="tag">Najla</span><span class="tag">Dila</span><span class="tag ketua-tag">Rizka (Ketua)</span><span class="tag">Naya</span><span class="tag">Fayyaza</span>
+                    </div>
+                </div>
+                <div class="group-item">
+                    <span class="label">Kelompok 5</span>
+                    <div class="member-tags">
+                        <span class="tag">Fathimah</span><span class="tag">Ayu Aisyah</span><span class="tag ketua-tag">Windy (Ketua)</span><span class="tag">Risha</span><span class="tag">Nafisah Dzakira / Pica</span>
+                    </div>
+                </div>
+                <div class="group-item">
+                    <span class="label">Kelompok 6</span>
+                    <div class="member-tags">
+                        <span class="tag">Arin</span><span class="tag">Naisya Asya</span><span class="tag">Unes</span><span class="tag">Amel C</span><span class="tag ketua-tag">Siti Aisyah (Ketua)</span><span class="tag">Salsa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3><i class="fas fa-home tidak-icon"></i> Tidak Naik Gunung</h3>
+            <div class="member-tags">
+                <span class="tag">Ami</span><span class="tag">Alifah</span><span class="tag">Salwa</span><span class="tag">Jahi</span><span class="tag">Nakes</span><span class="tag">Nadi</span><span class="tag">Shofi</span><span class="tag">Afika</span><span class="tag">Aca</span><span class="tag">Diaz</span><span class="tag">Futem</span><span class="tag">Ipeh</span><span class="tag">Alika</span><span class="tag">Putri</span><span class="tag">Asadel</span><span class="tag">Yulia</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piket Kamar - Bogor Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-wrap { padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+        .page-wrap .back-link { text-decoration: none; color: #fff; font-size: clamp(11px, 3vw, 13px); font-weight: bold; background: #8c5d52; padding: 8px 16px; border-radius: 20px; align-self: flex-start; }
+        .page-wrap h2 { font-size: clamp(17px, 5.5vw, 22px); font-style: italic; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.2); margin: 0; word-break: break-word; }
+        .tab-bar { display: flex; gap: 10px; margin-bottom: 5px; }
+        .tab-btn { flex: 1; padding: 10px; border: 2px solid #bd9687; border-radius: 12px; background: #fbeee6; color: #8c5d52; font-weight: bold; font-size: clamp(11px, 3vw, 13px); cursor: pointer; text-align: center; transition: all 0.2s; }
+        .tab-btn.active { background: #8c5d52; color: #fff; border-color: #8c5d52; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .card { background: #fbeee6; border-radius: 14px; padding: 14px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border: 2px solid #bd9687; }
+        .card h3 { font-size: clamp(13px, 4vw, 16px); color: #8c5d52; margin-bottom: 10px; text-align: center; }
+        .piket-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+        .room-card { background: #fff; border-radius: 12px; padding: 10px; border: 2px solid #e1bca7; text-align: center; }
+        .room-card .room-label { font-weight: bold; color: #8c5d52; font-size: clamp(11px, 3vw, 13px); margin-bottom: 6px; }
+        .room-card .name { font-size: clamp(10px, 2.8vw, 12px); color: #5a4b41; padding: 3px 0; }
+        .room-card .piket-badge { background: #8c5d52; color: #fff; font-size: clamp(9px, 2.5vw, 10px); padding: 2px 8px; border-radius: 8px; margin-top: 4px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="app-container page-wrap">
+        <a href="index.html" class="back-link">← KEMBALI</a>
+        <h2>PIKET KAMAR</h2>
+
+        <div class="tab-bar">
+            <button class="tab-btn active" onclick="switchTab('hari1')">Hari 1</button>
+            <button class="tab-btn" onclick="switchTab('hari2')">Hari 2</button>
+            <button class="tab-btn" onclick="switchTab('hari3')">Hari 3</button>
+        </div>
+
+        <div id="hari1" class="tab-content active">
+            <div class="card">
+                <h3>📋 Piket Kamar - Hari 1</h3>
+                <div class="piket-grid">
+                    <div class="room-card"><div class="room-label">Kamar 1</div><div class="name">Selvi</div><div class="name">Najla</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 2</div><div class="name">Alifah</div><div class="name">Nabila</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 3</div><div class="name">Nakes</div><div class="name">Nadi</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 4</div><div class="name">Windy</div><div class="name">Aca</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 5</div><div class="name">Anggun</div><div class="name">Kanya</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 6</div><div class="name">Unes</div><div class="name">Nafisah Aldawiyah</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 7</div><div class="name">Ghaitsani</div><div class="name">Amel C</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 8</div><div class="name">Risha</div><div class="name">Alika</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 9</div><div class="name">Asadel</div><div class="name">Naurah</div><div class="piket-badge">Piket</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hari2" class="tab-content">
+            <div class="card">
+                <h3>📋 Piket Kamar - Hari 2</h3>
+                <div class="piket-grid">
+                    <div class="room-card"><div class="room-label">Kamar 1</div><div class="name">Fathimah</div><div class="name">Dila</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 2</div><div class="name">Salwa</div><div class="name">Rizka</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 3</div><div class="name">Shofi</div><div class="name">Ayu Aisyah</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 4</div><div class="name">Naimah</div><div class="name">Zaro</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 5</div><div class="name">Diaz</div><div class="name">Naisya Asya</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 6</div><div class="name">Amalia</div><div class="name">Futem</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 7</div><div class="name">Ipeh</div><div class="name">Marha Nabiila</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 8</div><div class="name">Nafisah Dzakira / Pica</div><div class="name">Sausan</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 9</div><div class="name">Siti Aisyah</div><div class="name">Yulia</div><div class="piket-badge">Piket</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hari3" class="tab-content">
+            <div class="card">
+                <h3>📋 Piket Kamar - Hari 3</h3>
+                <div class="piket-grid">
+                    <div class="room-card"><div class="room-label">Kamar 1</div><div class="name">Ami</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 2</div><div class="name">Jahi</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 3</div><div class="name">Afika</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 4</div><div class="name">Arin</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 5</div><div class="name">Ratu</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 6</div><div class="name">Naya</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 7</div><div class="name">Fayyaza</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 8</div><div class="name">Nadila</div><div class="name">Putri</div><div class="piket-badge">Piket</div></div>
+                    <div class="room-card"><div class="room-label">Kamar 9</div><div class="name">Salma</div><div class="name">Salsa</div><div class="piket-badge">Piket</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tab).classList.add('active');
+            document.querySelector('.tab-btn[onclick*="' + tab + '"]').classList.add('active');
+        }
+    </script>
+</body>
+</html>

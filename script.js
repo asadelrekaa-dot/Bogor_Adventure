@@ -1,8 +1,8 @@
 const memberDatabase = [
     // KAMAR 1
-    { name: "Selvi", divisi: "Ketua Kelompok", piket: "Hari 1", rafting: "Kelompok 1 (Ketua)", offroad: "Kelompok 1 (Ketua)", mback: "Kelompok 4", kamar: "Kamar 1", gunung: "Kelompok 3" },
+    { name: "Selvi", divisi: "Ketua Kelompok", piket: "Hari 1", rafting: "Kelompok 1 (Ketua)", offroad: "Kelompok 1 (Ketua)", mback: "Kelompok 4 (Ketua)", kamar: "Kamar 1", gunung: "Kelompok 3" },
     { name: "Najla", divisi: "MC", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 1", offroad: "Kelompok 6", mback: "Kelompok 1", kamar: "Kamar 1", gunung: "Kelompok 4" },
-    { name: "Fathimah", divisi: "Bakar Frozen Food", piket: "Malam 1", rafting: "Kelompok 1", offroad: "Kelompok 5", mback: "Kelompok 2", kamar: "Kamar 1", gunung: "-" },
+    { name: "Fathimah", divisi: "Bakar Frozen Food", piket: "Malam 1", rafting: "Kelompok 1", offroad: "Kelompok 5", mback: "Kelompok 2", kamar: "Kamar 1", gunung: "Kelompok 5" },
     { name: "Dila", divisi: "Wakil Acara", piket: "Siang Hari 2", rafting: "Kelompok 1", offroad: "Kelompok 7", mback: "Kelompok 4", kamar: "Kamar 1", gunung: "Kelompok 4" },
     { name: "Ami", divisi: "Tenda", piket: "Malam 2", rafting: "Kelompok 1", offroad: "Kelompok 6", mback: "Kelompok 2", kamar: "Kamar 1", gunung: "-" },
 
@@ -11,8 +11,8 @@ const memberDatabase = [
     { name: "Alifah", divisi: "Komdigi / Ketua Kelompok", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 2 (Ketua)", offroad: "Kelompok 4 (Ketua)", mback: "Kelompok 4", kamar: "Kamar 2", gunung: "-" },
     { name: "Nabila", divisi: "Kendaraan / Photo Before After", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 2", offroad: "Kelompok 1", mback: "Kelompok 1", kamar: "Kamar 2", gunung: "Kelompok 1" },
     { name: "Salwa", divisi: "Divisi Konsumsi", piket: "Pagi Hari 1", rafting: "Kelompok 2", offroad: "Kelompok 2", mback: "Kelompok 1", kamar: "Kamar 2", gunung: "-" },
-    { name: "Rizka", divisi: "Sekertaris / Photo Before After", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 2", offroad: "Kelompok 2", mback: "Kelompok 2", kamar: "Kamar 2", gunung: "Kelompok 4" },
-    { name: "Jahi", divisi: "Bakar Frozen Food", piket: "Malam 1", rafting: "Kelompok 2", offroad: "Kelompok 1", mback: "Kelompok 2", kamar: "Kamar 2", gunung: "Kelompok 1" },
+    { name: "Rizka", divisi: "Sekertaris / Photo Before After", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 2", offroad: "Kelompok 2", mback: "Kelompok 2", kamar: "Kamar 2", gunung: "Kelompok 4 (Ketua)" },
+    { name: "Jahi", divisi: "Bakar Frozen Food", piket: "Malam 1", rafting: "Kelompok 2", offroad: "Kelompok 1", mback: "Kelompok 2", kamar: "Kamar 2", gunung: "-" },
 
 
     // KAMAR 3
@@ -23,14 +23,14 @@ const memberDatabase = [
     { name: "Afika", divisi: "Bakar Frozen Food", piket: "Malam 1", rafting: "Kelompok 3", offroad: "Kelompok 1", mback: "Kelompok 3", kamar: "Kamar 3", gunung: "-" },
 
     // KAMAR 4
-    { name: "Windy", divisi: "Ketua Kelompok", piket: "Hari 1", rafting: "Kelompok 4 (Ketua)", offroad: "Kelompok 3", mback: "Kelompok 2", kamar: "Kamar 4", gunung: "Kelompok 4" },
+    { name: "Windy", divisi: "Ketua Kelompok", piket: "Hari 1", rafting: "Kelompok 4 (Ketua)", offroad: "Kelompok 3 (Ketua)", mback: "Kelompok 2 (Ketua)", kamar: "Kamar 4", gunung: "Kelompok 5 (Ketua)" },
     { name: "Aca", divisi: "Divisi Konsumsi", piket: "Siang Hari 3", rafting: "Kelompok 4", offroad: "Kelompok 2", mback: "Kelompok 1", kamar: "Kamar 4", gunung: "-" },
-    { name: "Naimah", divisi: "Tenda", piket: "Malam 2", rafting: "Kelompok 4", offroad: "Kelompok 7", mback: "Kelompok 2", kamar: "Kamar 4", gunung: "Kelompok 2" },
-    { name: "Zaro", divisi: "Acara", piket: "Siang Hari 2 - Kawah Ratu", rafting: "Kelompok 4", offroad: "Kelompok 3", mback: "Kelompok 1", kamar: "Kamar 4", gunung: "-" },
+    { name: "Naimah", divisi: "Tenda", piket: "Malam 2", rafting: "Kelompok 4", offroad: "Kelompok 7", mback: "Kelompok 2", kamar: "Kamar 4", gunung: "Kelompok 2 (Ketua)" },
+    { name: "Zaro", divisi: "Acara", piket: "Siang Hari 2 - Kawah Ratu", rafting: "Kelompok 4", offroad: "Kelompok 3", mback: "Kelompok 1", kamar: "Kamar 4", gunung: "Kelompok 1" },
     { name: "Arin", divisi: "Divisi Konsumsi", piket: "Malam Hari 1", rafting: "Kelompok 4", offroad: "Kelompok 1", mback: "Kelompok 1", kamar: "Kamar 4", gunung: "Kelompok 6" },
 
     // KAMAR 5
-    { name: "Anggun", divisi: "Ketua Kelompok", piket: "Hari 1", rafting: "Kelompok 5 (Ketua)", offroad: "Kelompok 7 (Ketua)", mback: "Kelompok 3", kamar: "Kamar 5", gunung: "Kelompok 3" },
+    { name: "Anggun", divisi: "Ketua Kelompok", piket: "Hari 1", rafting: "Kelompok 5 (Ketua)", offroad: "Kelompok 7 (Ketua)", mback: "Kelompok 3(Ketua)", kamar: "Kamar 5", gunung: "Kelompok 3" },
     { name: "Kanya", divisi: "Bakar Frozen Food", piket: "Malam 1", rafting: "Kelompok 5", offroad: "Kelompok 3", mback: "Kelompok 3", kamar: "Kamar 5", gunung: "Kelompok 1 (Ketua)" },
     { name: "Diaz", divisi: "Komdigi", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 5", offroad: "Kelompok 4", mback: "Kelompok 1", kamar: "Kamar 5", gunung: "-" },
     { name: "Naisya Asya", divisi: "Kebersihan", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 5", offroad: "Kelompok 4", mback: "Kelompok 2", kamar: "Kamar 5", gunung: "Kelompok 6" },
@@ -41,7 +41,7 @@ const memberDatabase = [
     { name: "Nafisah Aldawiyah", divisi: "Kebersihan", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 6", offroad: "Kelompok 7", mback: "Kelompok 3", kamar: "Kamar 6", gunung: "Kelompok 1" },
     { name: "Amalia", divisi: "Kebersihan", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 6", offroad: "Kelompok 2", mback: "Kelompok 2", kamar: "Kamar 6", gunung: "Kelompok 3" },
     { name: "Futem", divisi: "Kesehatan", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 6", offroad: "Kelompok 3", mback: "Kelompok 1", kamar: "Kamar 6", gunung: "-" },
-    { name: "Naya", divisi: "Acara", piket: "Siang Hari 2 - Kawah Ratu", rafting: "Kelompok 6", offroad: "Kelompok 4", mback: "Kelompok 2", kamar: "Kamar 6", gunung: "Kelompok 5" },
+    { name: "Naya", divisi: "Acara", piket: "Siang Hari 2 - Kawah Ratu", rafting: "Kelompok 6", offroad: "Kelompok 4", mback: "Kelompok 2", kamar: "Kamar 6", gunung: "Kelompok 4" },
 
     // KAMAR 7
     { name: "Ghaitsani", divisi: "Ketua Kelompok", piket: "Hari 1", rafting: "Kelompok 7 (Ketua)", offroad: "Kelompok 6 (Ketua)", mback: "Kelompok 4", kamar: "Kamar 7", gunung: "Kelompok 2" },
@@ -51,17 +51,17 @@ const memberDatabase = [
     { name: "Fayyaza", divisi: "Divisi Konsumsi", piket: "Siang Hari 2", rafting: "Kelompok 7", offroad: "Kelompok 3", mback: "Kelompok 3", kamar: "Kamar 7", gunung: "Kelompok 4" },
 
     // KAMAR 8
-    { name: "Risha", divisi: "Ketua Kelompok", piket: "Hari 1", rafting: "Kelompok 8 (Ketua)", offroad: "Kelompok 6 (Ketua)", mback: "Kelompok 1", kamar: "Kamar 8", gunung: "Kelompok 5" },
+    { name: "Risha", divisi: "Ketua Kelompok", piket: "Hari 1", rafting: "Kelompok 8 (Ketua)", offroad: "Kelompok 6", mback: "Kelompok 1 (Ketua)", kamar: "Kamar 8", gunung: "Kelompok 5" },
     { name: "Alika", divisi: "Kebersihan", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 8", offroad: "Kelompok 4", mback: "Kelompok 2", kamar: "Kamar 8", gunung: "-" },
     { name: "Nafisah Dzakira / Pica", divisi: "Divisi Konsumsi", piket: "Pagi Hari 2", rafting: "Kelompok 8", offroad: "Kelompok 7", mback: "Kelompok 4", kamar: "Kamar 8", gunung: "Kelompok 5" },
-    { name: "Sausan", divisi: "Timekeeper", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 8", offroad: "Kelompok 5", mback: "Kelompok 4", kamar: "Kamar 8", gunung: "Kelompok 3" },
+    { name: "Sausan", divisi: "Timekeeper", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 8", offroad: "Kelompok 5", mback: "Kelompok 4", kamar: "Kamar 8", gunung: "Kelompok 3 (Ketua)" },
     { name: "Nadila", divisi: "Divisi Konsumsi", piket: "Pagi Hari 2", rafting: "Kelompok 8", offroad: "Kelompok 6", mback: "Kelompok 4", kamar: "Kamar 8", gunung: "Kelompok 2" },
     { name: "Putri", divisi: "Bendahara", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 1", offroad: "Kelompok 5", mback: "Kelompok 1", kamar: "Kamar 8", gunung: "-" },
 
     // KAMAR 9
     { name: "Asadel", divisi: "Ketua Acara", piket: "Malam Hari 2", rafting: "Kelompok 2", offroad: "Kelompok 4", mback: "Kelompok 3", kamar: "Kamar 9", gunung: "-" },
     { name: "Naurah", divisi: "Divisi Konsumsi", piket: "Pagi Hari 3", rafting: "Kelompok 3", offroad: "Kelompok 3", mback: "Kelompok 3", kamar: "Kamar 9", gunung: "Kelompok 2" },
-    { name: "Siti Aisyah", divisi: "Divisi Konsumsi", piket: "Pagi Hari 1", rafting: "Kelompok 4", offroad: "Kelompok 6", mback: "Kelompok 4", kamar: "Kamar 9", gunung: "Kelompok 6" },
+    { name: "Siti Aisyah", divisi: "Divisi Konsumsi", piket: "Pagi Hari 1", rafting: "Kelompok 4", offroad: "Kelompok 6", mback: "Kelompok 4", kamar: "Kamar 9", gunung: "Kelompok 6 (Ketua)" },
     { name: "Yulia", divisi: "Timekeeper", piket: "hari ke 1 sampai hari ke 3", rafting: "Kelompok 5", offroad: "Kelompok 5", mback: "Kelompok 3", kamar: "Kamar 9", gunung: "-" },
     { name: "Salma", divisi: "Bakar Frozen Food", piket: "Malam 1", rafting: "Kelompok 6", offroad: "Kelompok 1", mback: "Kelompok 2", kamar: "Kamar 9", gunung: "Kelompok 1" },
     { name: "Salsa", divisi: "Divisi Konsumsi", piket: "Malam Hari 2", rafting: "Kelompok 7", offroad: "Kelompok 4", mback: "Kelompok 3", kamar: "Kamar 9", gunung: "Kelompok 6" },
